@@ -1,0 +1,16 @@
+C:\Users\nikor\Desktop\proyect roulette\roulette\roulette\src\main\java\com\roulette\application\service\RouletteServiceInterface.java
+C:\Users\nikor\Desktop\proyect roulette\roulette\roulette\src\main\java\com\roulette\application\dto\WinnerDTO.java
+C:\Users\nikor\Desktop\proyect roulette\roulette\roulette\src\main\java\com\roulette\application\service\BetServiceImpl.java
+C:\Users\nikor\Desktop\proyect roulette\roulette\roulette\src\main\java\com\roulette\application\util\RouletteValidator.java
+C:\Users\nikor\Desktop\proyect roulette\roulette\roulette\src\main\java\com\roulette\application\RouletteApplication.java
+C:\Users\nikor\Desktop\proyect roulette\roulette\roulette\src\main\java\com\roulette\application\dto\BetDTO.java
+C:\Users\nikor\Desktop\proyect roulette\roulette\roulette\src\main\java\com\roulette\application\service\BetServiceInterface.java
+C:\Users\nikor\Desktop\proyect roulette\roulette\roulette\src\main\java\com\roulette\application\service\RouletteServiceImpl.java
+C:\Users\nikor\Desktop\proyect roulette\roulette\roulette\src\main\java\com\roulette\application\redis\RedisConfig.java
+C:\Users\nikor\Desktop\proyect roulette\roulette\roulette\src\main\java\com\roulette\application\dto\ResultBetDTO.java
+C:\Users\nikor\Desktop\proyect roulette\roulette\roulette\src\main\java\com\roulette\application\repository\RouletteRepository.java
+C:\Users\nikor\Desktop\proyect roulette\roulette\roulette\src\main\java\com\roulette\application\model\Bet.java
+C:\Users\nikor\Desktop\proyect roulette\roulette\roulette\src\main\java\com\roulette\application\dto\RouletteDTO.java
+C:\Users\nikor\Desktop\proyect roulette\roulette\roulette\src\main\java\com\roulette\application\controller\RouletteController.java
+C:\Users\nikor\Desktop\proyect roulette\roulette\roulette\src\main\java\com\roulette\application\dto\ResponseDTO.java
+C:\Users\nikor\Desktop\proyect roulette\roulette\roulette\src\main\java\com\roulette\application\model\Roulette.java

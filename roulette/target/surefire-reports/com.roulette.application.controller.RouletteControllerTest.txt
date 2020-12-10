@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.roulette.application.controller.RouletteControllerTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.052 s - in com.roulette.application.controller.RouletteControllerTest
