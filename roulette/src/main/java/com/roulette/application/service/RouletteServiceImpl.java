@@ -26,6 +26,7 @@ import com.roulette.application.util.RouletteConstants;
 public class RouletteServiceImpl implements RouletteServiceInterface {
 	@Autowired
 	private RouletteRepository rouletteRepository;
+	
 	@Autowired
 	ObjectMapper objectMapper;
 
@@ -44,6 +45,7 @@ public class RouletteServiceImpl implements RouletteServiceInterface {
 		Roulette roulette = new Roulette();
 		if (validationRoulette.isPresent()) {
 			roulette = validationRoulette.get();
+			roulette.setBets(new ArrayList<>());
 			roulette.setStatus("open");
 			rouletteRepository.save(roulette);
 			response = setMessageAndCode(200, RouletteConstants.MESSAGE_VALIDATE_OPEN_ROULETTE_CORRECT);

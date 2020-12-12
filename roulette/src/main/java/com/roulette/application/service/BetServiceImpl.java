@@ -23,6 +23,7 @@ import com.roulette.application.util.RuleValidation;
 
 /**
  * This class Allow bet operations
+ * 
  * @author Nicolas Palacios Rios
  * @version 1.0
  */
@@ -42,7 +43,8 @@ public class BetServiceImpl implements BetServiceInterface {
 		betDto.setUserCode(requestHeader.getHeader("userCode"));
 		if (rouletteObject.isPresent()) {
 			Roulette roulette = rouletteObject.get();
-			if (roulette.getStatus().equalsIgnoreCase(RouletteConstants.CONSTANT_OPEN) && RuleValidation.moneyAmountValidation(betDto)) {
+			if (roulette.getStatus() != null && roulette.getStatus().equalsIgnoreCase(RouletteConstants.CONSTANT_OPEN)
+					&& RuleValidation.moneyAmountValidation(betDto)) {
 				if (!RuleValidation.validateNumberAndColor(betDto)) {
 					response = setMessageAndCode(400, RouletteConstants.MESSAGE_VALIDATE_NUMBER_AND_COLOR_SERVICE);
 				} else {
@@ -51,7 +53,7 @@ public class BetServiceImpl implements BetServiceInterface {
 					rouletteRepository.save(roulette);
 					response = setMessageAndCode(200, RouletteConstants.MESSAGE_CREATE_BET_CORRECT);
 				}
-			}else {
+			} else {
 				response = setMessageAndCode(400, RouletteConstants.MESSAGE_CLOSE_BET);
 			}
 		} else {
@@ -96,12 +98,14 @@ public class BetServiceImpl implements BetServiceInterface {
 				response.addWinner(winnerUserDTO);
 			}
 			if (betList.get(i).getBetColor() != null) {
-				if (numberWinner % 2 == 0 && betList.get(i).getBetColor().equalsIgnoreCase(RouletteConstants.CONSTANT_RED)) {
+				if (numberWinner % 2 == 0
+						&& betList.get(i).getBetColor().equalsIgnoreCase(RouletteConstants.CONSTANT_RED)) {
 					response.setWinnerBetColor(RouletteConstants.CONSTANT_RED);
 					winnerUserDTO = new WinnerUserDTO(betList.get(i).getAmountMoney() * 1.8,
 							betList.get(i).getUserCode());
 					response.addWinner(winnerUserDTO);
-				} else if (numberWinner % 2 != 0 && betList.get(i).getBetColor().equalsIgnoreCase(RouletteConstants.CONSTANT_BLACK)) {
+				} else if (numberWinner % 2 != 0
+						&& betList.get(i).getBetColor().equalsIgnoreCase(RouletteConstants.CONSTANT_BLACK)) {
 					response.setWinnerBetColor(RouletteConstants.CONSTANT_BLACK);
 					winnerUserDTO = new WinnerUserDTO(betList.get(i).getAmountMoney() * 1.8,
 							betList.get(i).getUserCode());
@@ -112,12 +116,12 @@ public class BetServiceImpl implements BetServiceInterface {
 
 		return response;
 	}
-	
+
 	private ResponseDTO setMessageAndCode(int code, String message) {
 		ResponseDTO response = new ResponseDTO();
 		response.setCode(code);
 		response.setMessage(message);
-		
+
 		return response;
 	}
 
